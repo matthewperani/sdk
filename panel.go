@@ -613,12 +613,16 @@ type Target struct {
 	Target string `json:"target,omitempty"`
 
 	// For CloudWatch
-	Namespace  string            `json:"namespace,omitempty"`
-	MetricName string            `json:"metricName,omitempty"`
-	Statistics []string          `json:"statistics,omitempty"`
-	Dimensions map[string]string `json:"dimensions,omitempty"`
-	Period     string            `json:"period,omitempty"`
-	Region     string            `json:"region,omitempty"`
+	Namespace     string            `json:"namespace,omitempty"`
+	MetricName    string            `json:"metricName,omitempty"`
+	Statistics    []string          `json:"statistics,omitempty"`
+	Dimensions    map[string]string `json:"dimensions,omitempty"`
+	Period        string            `json:"period,omitempty"`
+	Region        string            `json:"region,omitempty"`
+	Expression    string            `json:"expression,omitempty"`
+	LogGroupNames []string          `json:"logGroupNames,omitempty"`
+	QueryMode     string            `json:"queryMode,omitempty"`
+
 
 	// For the Stackdriver data source. Find out more information at
 	// https:/grafana.com/docs/grafana/v6.0/features/datasources/stackdriver/
